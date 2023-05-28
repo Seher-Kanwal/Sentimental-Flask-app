@@ -1,5 +1,6 @@
 Flask
 gunicorn
 wfastcgi
-pandas
-
+numpy
+gensim
+scikit-learn
