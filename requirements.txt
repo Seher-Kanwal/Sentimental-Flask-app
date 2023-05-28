@@ -1,0 +1,6 @@
+Flask
+numpy
+gensim
+scikit-learn
+gunicorn
+wfastcgi
