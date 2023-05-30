@@ -15,7 +15,7 @@ def hello_world():
     return 'Hello, Test123!'
 
 
-@app.route('/Scoring<string/<string:comments>')
+@app.route('/Scoring/<string:comments>')
 def Scoring(comments):
     comments_list = comments.split('///')
     scoring_comments = []
@@ -30,7 +30,7 @@ def Scoring(comments):
     print(n)
     print(scoring_comments)
     percentage = (n / len(scoring_comments)) * 100
-    return int(percentage)
+    return str(int(percentage))
 
 
 def predict(comment):
