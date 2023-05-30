@@ -5,7 +5,6 @@ import numpy as np
 import pickle
 
 clf = pickle.load(open('gradientBoosting.pkl', 'rb'))
-wv = api.load('word2vec-google-news-300')
 
 app = Flask(__name__)
 
@@ -17,6 +16,7 @@ def hello_world():
 
 @app.route('/Scoring/<string:comments>')
 def Scoring(comments):
+    wv = api.load('word2vec-google-news-300')
     comments_list = comments.split('///')
     scoring_comments = []
     for comment in comments_list:
